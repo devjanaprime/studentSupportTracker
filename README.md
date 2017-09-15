@@ -46,4 +46,5 @@ Events:
 - category_id
 - dateTime
 - hours
+- students_in_attendance
 
