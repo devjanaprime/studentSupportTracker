@@ -23,8 +23,8 @@ Tech:
 ---
 
 - HTML
-- Bootstrap
-- CSS
+- Angular Material
+- CSS/Sass
 - JS
 - AngularJS
 - SQL
