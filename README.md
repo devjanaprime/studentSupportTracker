@@ -55,8 +55,8 @@ Tech:
 ---
 
 - HTML
-- Bootstrap
-- CSS
+- Angular Material
+- CSS/Sass
 - JS
 - AngularJS
 - SQL
@@ -78,4 +78,5 @@ Events:
 - category_id
 - dateTime
 - hours
+- students_in_attendance
 
