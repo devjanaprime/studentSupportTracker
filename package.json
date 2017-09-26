@@ -1,0 +1,28 @@
+{
+  "name": "studentsupporttracker",
+  "version": "1.0.0",
+  "description": "Tracks student support events at Prime",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devjanaprime/studentSupportTracker.git"
+  },
+  "author": "Dev Jana, Ally Boyd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devjanaprime/studentSupportTracker/issues"
+  },
+  "homepage": "https://github.com/devjanaprime/studentSupportTracker#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-animate": "^1.6.6",
+    "angular-aria": "^1.6.6",
+    "angular-material": "^1.1.4",
+    "angular-messages": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "express": "^4.15.5"
+  }
+}
