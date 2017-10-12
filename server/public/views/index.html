@@ -7,22 +7,30 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Student Support Tracker</title>
-        <!-- Angular / Angular-Route -->
-        <script src="vendors/angular.min.js" charset="utf-8"></script>
-        <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+
+        <!-- CSS -->
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
 
         <!-- Angular Material -->
         <link href="vendors/angular-material.min.css" rel="stylesheet" type="text/css">
+        <script src="vendors/angular.min.js" charset="utf-8"></script>
+        
         <script src="vendors/angular-animate.min.js" charset="utf-8"></script>
         <script src="vendors/angular-aria.min.js" charset="utf-8"></script>
-        <script src="vendors/angular-material.min.js" charset="utf-8"></script>
         <script src="vendors/angular-messages.min.js" charset="utf-8"></script>
+        <script src="vendors/angular-material.min.js" charset="utf-8"></script>
+        <!-- Angular / Angular-Route -->
+        
+        <script src="vendors/angular-route.min.js" charset="utf-8"></script>
+        
+        
 
         <!-- Client Side -->
         <script src="scripts/client.js" charset="utf-8"></script>
-        <script src="scripts/material.controller.js" charset="utf-8"></script>
-        <!-- CSS -->
-        <link href="styles/style.css" rel="stylesheet" type="text/css">
+        <script src="scripts/controllers/home.controller.js" charset="utf-8"></script>
+        <script src="scripts/controllers/info.controller.js" charset="utf-8"></script>
+        <script src="scripts/controllers/login.controller.js" charset="utf-8"></script>
+        <script src="scripts/services/user.service.js" charset="utf-8"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -31,5 +39,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Hello World</h1>
+        <div ng-controller="LoginController as lc">{{lc.test}}</div>
+        <main ng-view></main>
     </body>
 </html>
