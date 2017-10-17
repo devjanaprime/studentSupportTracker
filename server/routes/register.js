@@ -14,6 +14,7 @@ router.post('/', function(req, res) {
     console.log('post /register route');
 
     var userToSave = {
+        name: req.body.name,
         username: req.body.username,
         password: req.body.password
     };

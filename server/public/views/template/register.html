@@ -1,5 +1,24 @@
 <h1>This is the register page</h1>
 
-<form>
-    
-</form>
+<div layout="column" layout-align="center center">
+    <div class="loginBox md-whiteframe-z1" layout="column">
+        <md-toolbar><h2 class="md-toolbar-tools"><span>Register</span></h2></md-toolbar>
+        <md-content class="md-padding" layout="column">
+            <md-input-container>
+                <label>Name</label>
+                <input type="text" ng-model="rc.name">
+            </md-input-container>
+            <md-input-container>
+                <label>Email</label>
+                <input type="email" ng-model="rc.username">
+            </md-input-container>
+            <md-input-container>
+                <label>Password</label>
+                <input type="password" ng-model="rc.password">
+            </md-input-container>
+            <div layout="row" layout-align="center center">
+                <md-button class="md-raised md-primary" ng-click="rc.register()">Register</md-button>
+            </div>
+        </md-content>
+    </div>
+</div>

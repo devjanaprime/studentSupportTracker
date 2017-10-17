@@ -1,15 +1,15 @@
 <h1>This is the login page</h1>
-<div layout="column" layout-align="center center" layout-fill>
+<div layout="column" layout-align="center center">
     <div class="loginBox md-whiteframe-z1" layout="column">
         <md-toolbar><h2 class="md-toolbar-tools"><span>Login</span></h2></md-toolbar>
         <md-content class="md-padding" layout="column">
             <md-input-container>
                 <label>Email Address</label>
-                <input type="email" ng-model="username">
+                <input type="email" ng-model="lc.username">
             </md-input-container>
             <md-input-container>
                 <label>Password</label>
-                <input type="password" ng-model="password">
+                <input type="password" ng-model="lc.password">
             </md-input-container>
             <div layout="row" layout-align="center center">
                 <md-button class="md-raised md-primary">Login</md-button>

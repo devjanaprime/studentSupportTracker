@@ -1,8 +1,5 @@
-myApp.controller('UserController', function(UserService) {
-    console.log('UserController');
+myApp.controller('HomeController', function() {
+    console.log('HomeController');
     var vm = this;
 
-    vm.userService = UserService;
-
-    vm.userObject = UserService.userObject;
 })

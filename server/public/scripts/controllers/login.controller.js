@@ -31,19 +31,5 @@ myApp.controller('LoginController', function($http, $location, UserService) {
         }
     };
 
-    vm.register = function() {
-        console.log('LoginController register function');
-        if(vm.user.username === '' || vm.user.password === '') {
-            vm.message = 'Please choose a username and password'
-        } else {
-            console.log('LoginController register sending to server', vm.user);
-            $http.post('/register', vm.user).then(function(res) {
-                console.log('LoginController register successful');
-                $location.path('/home');
-            }).catch(function(res) {
-                console.log('LoginController register error');
-                vm.message = 'Please try again';
-            });
-        }
-    }
+
 });
