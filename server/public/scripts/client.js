@@ -1,5 +1,5 @@
 // Establish angular app
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngMaterial']);
 console.log('client.js loaded');
 // routes
 myApp.config(function($routeProvider, $locationProvider) {

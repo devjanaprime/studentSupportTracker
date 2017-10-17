@@ -1,3 +1,8 @@
 body {
     background-color: rgb(175, 169, 169);
 }
+
+.loginBox {
+    max-width: 90%;
+    width: 500px;
+}
