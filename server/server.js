@@ -10,9 +10,10 @@ var session = require('./modules/session');
 require('./modules/db');
 
 // route includes
-var index = require('./routes/index');
+var login = require('./routes/login');
 var register = require('./routes/register');
 var home = require('./routes/home');
+var landing = require('./routes/landing');
 
 // body-parser middleware
 app.use(bodyParser.json());
@@ -36,9 +37,10 @@ app.use('/loginFailure', function(req, res) {
 // routes
 app.use('/home', home);
 app.use('/register', register);
+app.use('/login', login);
 
 // catch all route
-app.use('/', index);
+app.use('/', landing);
 
 // setting port
 var port = process.env.PORT || 5000;
