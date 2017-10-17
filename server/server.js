@@ -14,6 +14,7 @@ var login = require('./routes/login');
 var register = require('./routes/register');
 var home = require('./routes/home');
 var landing = require('./routes/landing');
+var index = require('./routes/index');
 
 // body-parser middleware
 app.use(bodyParser.json());
@@ -31,6 +32,7 @@ app.use(passport.session());
 
 // route for login failure
 app.use('/loginFailure', function(req, res) {
+    console.log('LoginFailure');
     res.sendStatus(403);
 });
 
@@ -38,9 +40,10 @@ app.use('/loginFailure', function(req, res) {
 app.use('/home', home);
 app.use('/register', register);
 app.use('/login', login);
+app.use('/landing', landing);
 
 // catch all route
-app.use('/', landing);
+app.use('/', index);
 
 // setting port
 var port = process.env.PORT || 5000;
