@@ -3,7 +3,7 @@ var router = express.Router();
 var passport = require('passport');
 var path = require('path');
 
-// login form POST
+// login POST
 router.post('/',
     passport.authenticate('local', {
         successRedirect: '/home',
@@ -11,10 +11,6 @@ router.post('/',
     })
 );
 
-router.get('/', function(req, res) {
-    console.log('request for index');
-    res.sendFile(path.join(__dirname, '../public/views/index.html'));
-});
 
 
 module.exports = router;

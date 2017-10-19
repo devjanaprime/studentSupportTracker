@@ -32,7 +32,7 @@ UserSchema.pre('save', function(next) {
     });
 });
 
-// comparing login form password to DB password
+// comparing login password to DB password
 UserSchema.methods.comparePassword = function(candidatePassword, callback) {
     bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
         if(err) {

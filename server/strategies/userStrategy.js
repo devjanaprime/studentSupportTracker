@@ -5,7 +5,6 @@ var User = require('../models/user.js');
 // store user's info during authentication for later use
 // stores in req.session.passport.user
 passport.serializeUser(function(user, done) {
-    console.log('User serialized!', user);
     done(null, user.id);
 });
 
@@ -16,12 +15,11 @@ passport.deserializeUser(function(id, done) {
         if(err) {
             done(err);
         }
-        console.log('User deserialized!', user.id);
         done(null, user);
     });
 });
 
-// for logging in, called by POST in index route middleware
+// for logging in, called by POST in route middleware
 passport.use('local', new localStrategy({
     passReqToCallback: true,
     usernameField: 'username'
@@ -34,7 +32,6 @@ passport.use('local', new localStrategy({
         // user variable passed to us from mongoose
         if(!user) {
             // user not found
-            console.log('userStrategy: user not found!');
             return done(null, false, {message: 'Incorrect credentials.'});
         } else {
             // user found, check that password matches
@@ -44,11 +41,9 @@ passport.use('local', new localStrategy({
                 }
                 if (isMatch) {
                     // populate user on the session with serializeUser
-                    console.log('userStrategy: password matched!');
                     return done(null, user);
                 } else {
                     // password didn't match
-                    console.log('userStrategy: password not a match');
                     done(null, false, {message: 'Incorrect credentials.'});
                 }
             });
