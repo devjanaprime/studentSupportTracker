@@ -16,16 +16,20 @@ router.post('/', function(req, res) {
         username: req.body.username,
         password: req.body.password
     };
-// check if email is primeacademy.io, send 500 if doesn't match
-// regular express
-// .includes()
-    Users.create(userToSave, function(err, post) {
-        if(err) {
-            res.sendStatus(500);
-        } else {
-            res.sendStatus(201);
-        }
-    });
+ 
+    var validEmail = userToSave.username.includes('@primeacademy.io');
+
+    if (validEmail === true) {
+        Users.create(userToSave, function(err, post) {
+            if(err) {
+                res.sendStatus(500);
+            } else {
+                res.sendStatus(201);
+            }
+        });
+    } else {
+        res.sendStatus(500);
+    }
 });
 
 module.exports = router;
