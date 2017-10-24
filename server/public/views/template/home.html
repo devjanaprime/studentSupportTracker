@@ -1,2 +1,8 @@
 <div ng-include="'views/partials/header.html'"></div>
 <h1>This is the home view/signed in landing page</h1>
+
+<div layout="column" layout-align="center center">
+    <md-button class="md-raised md-primary" ng-click="hc.addEventClick()">Add Event</md-button>
+    
+    <md-button class="md-raised md-warn" ng-click="hc.viewEventClick()">View Events</md-button>
+</div>

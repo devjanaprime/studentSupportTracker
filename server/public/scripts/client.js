@@ -15,11 +15,17 @@ myApp.config(function($routeProvider, $locationProvider) {
             controller: 'RegisterController as rc'
         })
         .when('/login', {
-            templateUrl: 'views/template/login.html',
+            templateUrl: '/views/template/login.html',
             controller: 'LoginController as lc'
         })
+        .when('/addEvent', {
+            templateUrl: '/views/template/addEvent.html'
+        })
+        .when('/events', {
+            templateUrl: '/views/template/events.html'
+        })
         .when('/', {
-            templateUrl: 'views/template/landing.html',
+            templateUrl: '/views/template/landing.html',
             controller: 'LandingController as mc'
         })
         .otherwise({
