@@ -17,6 +17,7 @@ router.post('/', function(req, res) {
         password: req.body.password
     };
  
+    // checks if registration email is valid before allowing registration to happen
     var validEmail = userToSave.username.includes('@primeacademy.io');
 
     if (validEmail === true) {

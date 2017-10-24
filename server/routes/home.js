@@ -16,11 +16,6 @@ router.get('/', function(req, res) {
     }
 });
 
-// to logout, clear all session info
-router.get('/logout', function(req, res) {
-    // Passport's built in log out function
-    req.logOut();
-    res.sendStatus(200);
-});
+
 
 module.exports = router;

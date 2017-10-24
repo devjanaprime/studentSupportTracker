@@ -2,6 +2,8 @@ myApp.controller('LoginController', function($http, $location, UserService) {
     console.log('LoginController');
 
     var vm = this;
+
+    vm.userservice = UserService;
     
     vm.message = '';
 
@@ -24,6 +26,13 @@ myApp.controller('LoginController', function($http, $location, UserService) {
             });
         }
     };
+
+    vm.logout = function() {
+        console.log('log out button clicked');
+        $http.get('/logout').then(function(res) {
+            $location.path('/');
+        });
+    }
 
 
 });

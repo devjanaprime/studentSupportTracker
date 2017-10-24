@@ -15,6 +15,7 @@ var register = require('./routes/register');
 var home = require('./routes/home');
 var landing = require('./routes/landing');
 var index = require('./routes/index');
+var logout = require('./routes/logout');
 
 // body-parser middleware
 app.use(bodyParser.json());
@@ -40,6 +41,7 @@ app.use('/loginFailure', function(req, res) {
 app.use('/home', home);
 app.use('/register', register);
 app.use('/login', login);
+app.use('/logout', logout);
 app.use('/landing', landing);
 
 // catch all route
