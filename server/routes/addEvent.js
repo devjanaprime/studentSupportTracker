@@ -2,9 +2,8 @@ var express = require('express');
 var router = express.Router();
 var Events = require('../models/event');
 
-// POST request
+// POST request to add new event
 router.post('/', function(req, res) {
-    console.log('req.body in router.pos', req.body);
     var eventToSave = {
         userId: req.user._id,
         date: req.body.date,

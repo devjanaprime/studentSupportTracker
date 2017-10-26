@@ -1,5 +1,4 @@
 myApp.controller('LoginController', function($http, $location, UserService) {
-    console.log('LoginController');
 
     var vm = this;
 
@@ -7,6 +6,7 @@ myApp.controller('LoginController', function($http, $location, UserService) {
     
     vm.message = '';
 
+    // function to log in a user
     vm.login = function() {
         vm.user = {
             username: vm.username,
@@ -27,8 +27,8 @@ myApp.controller('LoginController', function($http, $location, UserService) {
         }
     };
 
+    // function to log out a user
     vm.logout = function() {
-        console.log('log out button clicked');
         $http.get('/logout').then(function(res) {
             $location.path('/');
         });

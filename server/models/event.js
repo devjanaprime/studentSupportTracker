@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-// mongoose schema
+// mongoose schema for events
 var EventSchema = new Schema({
     userId: {type: Schema.ObjectId, ref: 'User'},
     date: {type: Date, required: true},

@@ -1,10 +1,10 @@
 myApp.controller('RegisterController', function($http, $location, UserService) {
-    console.log('RegisterController');
 
     var vm = this;
 
     vm.message = '';
 
+    // function to register a new user if all the required information is filled out
     vm.register = function() {
         vm.newUser = {
             name: vm.name,

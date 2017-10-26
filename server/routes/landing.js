@@ -4,7 +4,6 @@ var path = require('path');
 
 // request for HTML page
 router.get('/', function(req, res) {
-    console.log('get /landing route');
     res.sendFile(path.resolve(__dirname, '../public/views/template/landing.html'));
 });
 

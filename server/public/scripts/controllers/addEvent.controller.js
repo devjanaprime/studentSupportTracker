@@ -1,12 +1,9 @@
 myApp.controller('AddEventController', function($http, $location) {
-    console.log('AddEventController');
 
     var vm = this;
 
-    console.log('user', vm.user);
-
+    // function to add a new event, but only if required information is filled out, then redirects user back to logged in landing page
     vm.eventSubmit = function() {
-        console.log('inside event submit function');
         vm.newEvent = {
             eventName: vm.eventName,
             date: vm.eventDate,

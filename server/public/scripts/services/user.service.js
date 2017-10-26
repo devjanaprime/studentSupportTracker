@@ -1,5 +1,4 @@
 myApp.service('UserService', function($http) {
-    console.log('UserService');
 
     var self = this;
 
@@ -11,12 +10,4 @@ myApp.service('UserService', function($http) {
             console.log('error in user service');
         });
     }
-
-    // self.logout = function() {
-    //     console.log('userservice logout');
-    //     $http.get('/logout').then(function(res) {
-    //         console.log('logged out in userservice');
-    //         $location.path('/');
-    //     })
-    // }
 });

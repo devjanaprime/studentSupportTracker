@@ -3,4 +3,10 @@ myApp.controller('EventListController', function() {
 
     var vm = this;
 
+    // function to get all events
+
+    // function to update an event
+
+    // function to delete something from an event
+    
 });
