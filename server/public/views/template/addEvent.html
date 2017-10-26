@@ -1,2 +1,33 @@
 <div ng-include="'views/partials/header.html'"></div>
 <h1>This is the add event page</h1>
+
+<div layout="column" layout-align="center center">
+    <div class="md-whiteframe-z1 addEventBox" layout="column">
+        <md-toolbar><h2 class="md-toolbar-tools"><span>Add Event</span></h2></md-toolbar>
+        <md-content class="md-padding" layout="column">
+            <md-input-container>
+                <label>Event Name</label>
+                <input type="text" ng-model="ac.eventName">
+            </md-input-container>
+            <md-input-container>
+                <label>Date</label>
+                <input type="date" ng-model="ac.eventDate">
+            </md-input-container>
+            <md-input-container>
+                <label>Attendees</label>
+                <input type="text" ng-model="ac.attendees">
+            </md-input-container>
+            <md-input-container>
+                <label>Volunteers</label>
+                <input type="text" ng-model="ac.volunteers">
+            </md-input-container>
+            <md-input-container>
+                <label>Notes</label>
+                <input type="text" ng-model="ac.notes">
+            </md-input-container>
+            <div layout="row" layout-align="center center">
+                <md-button class="md-raised md-primary" ng-click="ac.eventSubmit()">Submit</md-button>
+            </div>
+        </md-content>
+    </div>
+</div>

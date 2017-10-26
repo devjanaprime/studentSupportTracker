@@ -16,6 +16,8 @@ var home = require('./routes/home');
 var landing = require('./routes/landing');
 var index = require('./routes/index');
 var logout = require('./routes/logout');
+var addEvent = require('./routes/addEvent');
+var eventList = require('./routes/eventList');
 
 // body-parser middleware
 app.use(bodyParser.json());
@@ -43,6 +45,8 @@ app.use('/register', register);
 app.use('/login', login);
 app.use('/logout', logout);
 app.use('/landing', landing);
+app.use('/addEvent', addEvent);
+app.use('/events', eventList);
 
 // catch all route
 app.use('/', index);

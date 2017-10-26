@@ -19,10 +19,12 @@ myApp.config(function($routeProvider, $locationProvider) {
             controller: 'LoginController as lc'
         })
         .when('/addEvent', {
-            templateUrl: '/views/template/addEvent.html'
+            templateUrl: '/views/template/addEvent.html',
+            controller: 'AddEventController as ac'
         })
         .when('/events', {
-            templateUrl: '/views/template/events.html'
+            templateUrl: '/views/template/events.html',
+            controller: 'EventListController as ec'
         })
         .when('/', {
             templateUrl: '/views/template/landing.html',
