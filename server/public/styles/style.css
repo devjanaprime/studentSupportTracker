@@ -2,7 +2,7 @@ body {
     background-color: rgb(175, 169, 169);
 }
 
-.loginBox, .addEventBox {
+.loginBox, .addEventBox, .eventDisplay {
      width: 75%;
 }
 

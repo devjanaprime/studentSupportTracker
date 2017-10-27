@@ -1,21 +1,21 @@
 <div ng-include="'views/partials/header.html'"></div>
 <h1>This is the add event page</h1>
 
-<div layout="column" layout-align="center center">
+<div layout="column" layout-align="center center" id="popupContainer">
     <div class="md-whiteframe-z1 addEventBox" layout="column">
         <md-toolbar><h2 class="md-toolbar-tools"><span>Add Event</span></h2></md-toolbar>
         <md-content class="md-padding" layout="column">
             <md-input-container>
                 <label>Event Name</label>
-                <input type="text" ng-model="ac.eventName">
+                <input type="text" ng-model="ac.eventName" required>
             </md-input-container>
             <md-input-container>
                 <label>Date</label>
-                <input type="date" ng-model="ac.eventDate">
+                <input type="date" ng-model="ac.eventDate" required>
             </md-input-container>
             <md-input-container>
                 <label>Attendees</label>
-                <input type="text" ng-model="ac.attendees">
+                <input type="text" ng-model="ac.attendees" required>
             </md-input-container>
             <md-input-container>
                 <label>Volunteers</label>

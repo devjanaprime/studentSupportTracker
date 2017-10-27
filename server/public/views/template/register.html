@@ -7,15 +7,15 @@
         <md-content class="md-padding" layout="column">
             <md-input-container>
                 <label>Name</label>
-                <input type="text" ng-model="rc.name">
+                <input type="text" ng-model="rc.name" required>
             </md-input-container>
             <md-input-container>
                 <label>Email</label>
-                <input type="email" ng-model="rc.username">
+                <input type="email" ng-model="rc.username" required>
             </md-input-container>
             <md-input-container>
                 <label>Password</label>
-                <input type="password" ng-model="rc.password">
+                <input type="password" ng-model="rc.password" required>
             </md-input-container>
             <div layout="row" layout-align="center center">
                 <md-button class="md-raised md-primary" ng-click="rc.register()">Register</md-button>

@@ -1,12 +1,9 @@
-myApp.controller('EventListController', function() {
-    console.log('EventListController');
+myApp.controller('EventListController', function($http) {
 
     var vm = this;
 
     // function to get all events
-
-    // function to update an event
-
-    // function to delete something from an event
-    
+    $http.get('/events').then(function(res) {
+        vm.events = res.data;
+    });
 });
