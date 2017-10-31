@@ -13,7 +13,7 @@ myApp.controller('RegisterController', function($http, $location, UserService, $
         if(vm.newUser.name === undefined || vm.newUser.username === undefined || vm.newUser.password === undefined) {
             $mdDialog.show(
                 $mdDialog.alert()
-                .parent(angular.element(document.querySelector('#popupContainer')))
+                .parent(angular.element(document.querySelector('.popupContainer')))
                 .clickOutsideToClose(false)
                 .title('Error')
                 .textContent('Name, Email, and Password are required fields')

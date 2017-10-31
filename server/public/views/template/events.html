@@ -7,16 +7,19 @@
             <md-card-content>
                 <span class="eventInfo">{{event.eventName}},</span> {{event.date | date}}
                 <br>
+                <br>
                 <!-- attendees, volunteers, notes to go in ng-hide/show here -->
                 <div class="hiddenContent" ng-show="details">
                     <b>Attendees:</b>
                     <div ng-repeat="attendee in event.attendees">
                         {{attendee.name}}
                     </div>
+                    <br>
                     <b>Volunteers:</b>
                     <div ng-repeat="volunteer in event.volunteers">
                         {{volunteer.name}}
                     </div>
+                    <br>
                     <b>Notes:</b>
                     <br>
                     {{event.notes}}

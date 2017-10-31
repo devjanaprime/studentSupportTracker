@@ -7,6 +7,7 @@ router.get('/', function(req, res) {
     if(req.isAuthenticated()) {
         // send back info
         var userInfo = {
+            user: req.user.name,
             username: req.user.username
         };
         res.send(userInfo);

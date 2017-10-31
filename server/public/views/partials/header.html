@@ -1,5 +1,7 @@
 <div class="headerContainer" ng-controller="LoginController as lc">
     <div class="header">
+        {{lc.userInfo}}
+        <span ng-bind="lc.userInfo"></span>
         <img id="logo" src="./images/logo.png">
         <md-button class="md-raised md-accent md-hue-3 logoutButton" ng-click="lc.logout()">Logout</md-button>
     </div>

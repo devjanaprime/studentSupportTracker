@@ -6,6 +6,7 @@ myApp.service('UserService', function($http) {
     self.register = function(userObj) {
         $http.post('/register', userObj).then(function(res) {
             console.log('Successful response from server');
+            return userObj;
         }).catch(function(err) {
             console.log('error in user service');
         });
