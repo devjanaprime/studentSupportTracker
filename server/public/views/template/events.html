@@ -5,19 +5,19 @@
         <md-toolbar><h2 class="md-toolbar-tools"><span>Events</span></h2></md-toolbar>
         <md-card ng-repeat="event in ec.events" ng-click="details = !details">
             <md-card-content>
-                {{event.eventName}}, {{event.date | date}}
+                <span class="eventInfo">{{event.eventName}},</span> {{event.date | date}}
                 <br>
                 <!-- attendees, volunteers, notes to go in ng-hide/show here -->
                 <div class="hiddenContent" ng-show="details">
-                    Attendees:
+                    <b>Attendees:</b>
                     <div ng-repeat="attendee in event.attendees">
                         {{attendee.name}}
                     </div>
-                    Volunteers:
+                    <b>Volunteers:</b>
                     <div ng-repeat="volunteer in event.volunteers">
                         {{volunteer.name}}
                     </div>
-                    Notes:
+                    <b>Notes:</b>
                     <br>
                     {{event.notes}}
                 </div>
@@ -27,3 +27,5 @@
         </md-card>
     </div>
 </div>
+
+<div ng-include="'views/partials/footer.html'"></div>

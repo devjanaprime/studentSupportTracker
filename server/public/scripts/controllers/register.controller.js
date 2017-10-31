@@ -1,4 +1,4 @@
-myApp.controller('RegisterController', function($http, $location, UserService, $mdDialog) {
+myApp.controller('RegisterController', function($http, $location, UserService, $mdDialog, $mdToast) {
 
     var vm = this;
 
@@ -24,7 +24,12 @@ myApp.controller('RegisterController', function($http, $location, UserService, $
             $http.post('/register', vm.newUser).then(function(res) {
                 $location.path('/');
             }).catch(function(res) {
-                vm.message = 'Please try again';
+                $mdToast.show(
+                    $mdToast.simple()
+                        .textContent('Error, please try again')
+                        .position(pinTo)
+                        .hideDelay(3000)
+                );
             });
         }
     }

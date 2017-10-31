@@ -10,7 +10,8 @@
 
         <!-- CSS -->
         <link href="styles/style.css" rel="stylesheet" type="text/css">
-
+        <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+        
         <!-- Angular Material -->
         <link href="vendors/angular-material.min.css" rel="stylesheet" type="text/css">
         <script src="vendors/angular.min.js" charset="utf-8"></script>
@@ -38,9 +39,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body ng-app="myApp">
-        <!--[if lt IE 7]>
+        <div class="container">
+            <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <main ng-view></main>
+            <![endif]-->
+            <main ng-view></main>
+        </div>
+        
     </body>
 </html>

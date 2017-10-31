@@ -6,6 +6,18 @@ myApp.controller('AddEventController', function($http, $location, $mdDialog) {
     // function to add a new event, but only if required information is filled out, then redirects user back to logged in landing page
     vm.eventSubmit = function() {
 
+        vm.attendeesArray = [];
+        
+        vm.attendees.replace(/\s/g, '').split(",").map(function(attendee) {
+            vm.attendeesArray.push({"name": attendee});
+        });
+    
+        vm.volunteersArray = [];
+    
+        vm.volunteers.replace(/\s''/g).split(",").map(function(volunteer) {
+            vm.volunteersArray.push({"name": volunteer});
+        });
+
         vm.newEvent = {
             eventName: vm.eventName,
             date: vm.eventDate,
@@ -13,7 +25,7 @@ myApp.controller('AddEventController', function($http, $location, $mdDialog) {
             notes: vm.notes,
             volunteers: vm.volunteersArray
         };
-
+        
         if(vm.newEvent.eventName === undefined || vm.newEvent.date === undefined || vm.newEvent.attendees === undefined) {
             $mdDialog.show(
                 $mdDialog.alert()
@@ -25,22 +37,10 @@ myApp.controller('AddEventController', function($http, $location, $mdDialog) {
                 .ok('Oh no!')
             );
         } else {
-            vm.attendeesArray = [];
-            
-            vm.attendees.replace(/\s/g, '').split(",").map(function(attendee) {
-                vm.attendeesArray.push({"name": attendee});
-            });
-        
-            vm.volunteersArray = [];
-        
-            vm.volunteers.replace(/\s''/g).split(",").map(function(volunteer) {
-                vm.volunteersArray.push({"name": volunteer});
-            });
-
             $http.post('/addEvent', vm.newEvent).then(function(res) {
                 $location.path('/home');
             }).catch(function(res) {
-                vm.message = 'Please try again';
+                console.log(res);
             });
         }
     }
