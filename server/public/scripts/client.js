@@ -2,7 +2,7 @@
 var myApp = angular.module('myApp', ['ngRoute', 'ngMaterial']);
 
 // routes
-myApp.config(function($routeProvider, $locationProvider) {
+myApp.config(function($routeProvider, $locationProvider, $mdThemingProvider) {
     $locationProvider.hashPrefix('');
 
     $routeProvider
@@ -33,4 +33,11 @@ myApp.config(function($routeProvider, $locationProvider) {
         .otherwise({
             redirectTo: 'landing'
         });
+
+    $mdThemingProvider
+        .theme('default')
+        .primaryPalette('teal')
+        .accentPalette('blue-grey')
+        .warnPalette('deep-orange')
+        .backgroundPalette('grey');
 });

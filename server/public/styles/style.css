@@ -1,5 +1,5 @@
-body {
-    background-color: rgb(175, 169, 169);
+body, main {
+    background-color: rgb(216, 216, 216);
 }
 
 .loginBox, .addEventBox, .eventDisplay {
@@ -7,6 +7,25 @@ body {
 }
 
 .header {
-    background-color: teal;
-    height: 100px;
+    background-color: #07aa9e;
+    height: 130px;
+}
+
+#logo {
+    height: 130px;
+    margin-left: 20px;
+}
+
+.logoutButton {
+    float: right;
+}
+
+.largeButton {
+    width: 200px;
+    height: 60px;
+}
+
+.buttonContainer, .eventContainer {
+    padding-top: 50px;
+    margin-bottom: 100px;
 }

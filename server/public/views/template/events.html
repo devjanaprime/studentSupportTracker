@@ -1,7 +1,6 @@
 <div ng-include="'views/partials/header.html'"></div>
-<h1>This is the event list page</h1>
 
-<div layout="column" layout-align="center center">
+<div class="eventContainer" layout="column" layout-align="center center">
     <div class="eventDisplay" layout="column">
         <md-toolbar><h2 class="md-toolbar-tools"><span>Events</span></h2></md-toolbar>
         <md-card ng-repeat="event in ec.events" ng-click="details = !details">

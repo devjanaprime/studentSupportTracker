@@ -1,9 +1,8 @@
 <div ng-include="'views/partials/header.html'"></div>
-<h1>This is the initial landing page</h1>
 
-<div layout="column" layout-align="center center">
-    <md-button class="md-raised md-primary" ng-click="mc.loginClick()">Login</md-button>
+<div class="buttonContainer" layout="column" layout-align="center center">
+    <md-button class="md-raised md-accent md-hue-3 largeButton" ng-click="mc.loginClick()">Login</md-button>
     
-    <md-button class="md-raised md-warn" ng-click="mc.registerClick()">Register</md-button>
+    <md-button class="md-raised md-warn largeButton" ng-click="mc.registerClick()">Register</md-button>
 </div>
 
