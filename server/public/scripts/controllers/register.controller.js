@@ -1,8 +1,7 @@
-myApp.controller('RegisterController', function($http, $location, UserService) {
+myApp.controller('RegisterController', function($http, $location, UserService, $mdDialog) {
 
     var vm = this;
 
-    vm.message = '';
 
     // function to register a new user if all the required information is filled out
     vm.register = function() {
@@ -11,8 +10,16 @@ myApp.controller('RegisterController', function($http, $location, UserService) {
             username: vm.username,
             password: vm.password
         };
-        if(vm.newUser.name === '' || vm.newUser.username === '' || vm.newUser.password === '') {
-            vm.message = 'Please enter your name, a username, and a password'
+        if(vm.newUser.name === undefined || vm.newUser.username === undefined || vm.newUser.password === undefined) {
+            $mdDialog.show(
+                $mdDialog.alert()
+                .parent(angular.element(document.querySelector('#popupContainer')))
+                .clickOutsideToClose(false)
+                .title('Error')
+                .textContent('Name, Email, and Password are required fields')
+                .ariaLabel('Missing Information Dialog')
+                .ok('Oh no!')
+            );
         } else {
             $http.post('/register', vm.newUser).then(function(res) {
                 $location.path('/');
