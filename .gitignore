@@ -2,3 +2,4 @@
 node_modules/
 *.log
 dump/
+.DS_Store/
