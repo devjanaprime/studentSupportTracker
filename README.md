@@ -9,42 +9,42 @@ Version 1.0:
 
 - users can log in with @primeacademy.io email
 
-![Login Page](./images/SSTLoginPage.png)
+![Login Page](server/public/images/SSTLoginPage.png)
 
 
 - users will be able to view upcoming events and event details
 
 
-![Landing Page](./images/SSTLandingPage.png)
+![Landing Page](server/public/images/SSTLandingPage.png)
 
 
-![Event Detail Page](./images/SSTEventDetails.png)
+![Event Detail Page](server/public/images/SSTEventDetails.png)
 
 
 - users will be able to submit a new Event
 
-![Add Event Page](./images/SSTAddEvent.png)
+![Add Event Page](server/public/images/SSTAddEvent.png)
 
-![Event Success](./images/SSTEventSuccess.png)
+![Event Success](server/public/images/SSTEventSuccess.png)
 
-![Event Error](./images/SSTEventError.png)
+![Event Error](server/public/images/SSTEventError.png)
 
 - users will be able to add attendees for Events and view who has signed up to attend
 
-![Add Attendees](./images/SSTAddAttendees.png)
+![Add Attendees](server/public/images/SSTAddAttendees.png)
 
-![Attendees Success](./images/SSTAttendeeSuccess.png)
+![Attendees Success](server/public/images/SSTAttendeeSuccess.png)
 
-![Attendees Error](./images/SSTAttendeeError.png)
+![Attendees Error](server/public/images/SSTAttendeeError.png)
 
-![Attendees List](./images/SSTAttendeesList.png)
+![Attendees List](server/public/images/SSTAttendeesList.png)
 
 - users will be able to add Categories
 - basic report that lists all Events
 - filter said list by user
 - filter said list by category
 
-![Reporting Page](./images/SSTReporting.png)
+![Reporting Page](server/public/images/SSTReporting.png)
 
 Version 2.0:
 - filter report by multiple users &/or categories
