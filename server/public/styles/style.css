@@ -17,6 +17,7 @@ main {
 .loginBox, .addEventBox, .eventDisplay {
      width: 75%;
      margin-top: 50px;
+     margin-bottom: 50px;
 }
 
 .header {

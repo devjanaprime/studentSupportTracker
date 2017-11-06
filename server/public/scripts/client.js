@@ -34,6 +34,7 @@ myApp.config(function($routeProvider, $locationProvider, $mdThemingProvider) {
             redirectTo: 'landing'
         });
 
+    // Angular Material themes to control the colors of elements
     $mdThemingProvider
         .theme('default')
         .primaryPalette('teal')

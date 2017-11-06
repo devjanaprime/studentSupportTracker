@@ -4,6 +4,7 @@ myApp.controller('LoginController', function($http, $location, UserService, $mdD
 
     vm.userservice = UserService;
 
+    // trying to capture user's name variable to display in greeting on the DOM
     vm.userInfo = '';
 
     // function to log in a user
@@ -12,6 +13,8 @@ myApp.controller('LoginController', function($http, $location, UserService, $mdD
             username: vm.username,
             password: vm.password
         };
+
+        // if email or password are missing, dialog to inform user of required fields
         if(vm.user.username === undefined || vm.user.password === undefined) {
             $mdDialog.show(
                 $mdDialog.alert()
@@ -29,6 +32,7 @@ myApp.controller('LoginController', function($http, $location, UserService, $mdD
                 if(res.data.username) {
                     $location.path('/home');
                 } else {
+                    // dialog if user enters wrong credentials
                     $mdDialog.show(
                         $mdDialog.alert()
                         .parent(angular.element(document.querySelector('.popupContainer')))
@@ -41,6 +45,7 @@ myApp.controller('LoginController', function($http, $location, UserService, $mdD
                 };
                 return vm.userInfo;
             }).catch(function(res) {
+                // dialog if user is not registered
                 $mdDialog.show(
                     $mdDialog.alert()
                     .parent(angular.element(document.querySelector('.popupContainer')))

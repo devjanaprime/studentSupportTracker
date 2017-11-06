@@ -10,6 +10,8 @@ myApp.controller('RegisterController', function($http, $location, UserService, $
             username: vm.username,
             password: vm.password
         };
+
+        // dialog if any required fields are left blank
         if(vm.newUser.name === undefined || vm.newUser.username === undefined || vm.newUser.password === undefined) {
             $mdDialog.show(
                 $mdDialog.alert()
@@ -24,11 +26,15 @@ myApp.controller('RegisterController', function($http, $location, UserService, $
             $http.post('/register', vm.newUser).then(function(res) {
                 $location.path('/');
             }).catch(function(res) {
-                $mdToast.show(
-                    $mdToast.simple()
-                        .textContent('Error, please try again')
-                        .position(pinTo)
-                        .hideDelay(3000)
+                // dialog if person tries to enter non-Prime email
+                $mdDialog.show(
+                    $mdDialog.alert()
+                    .parent(angular.element(document.querySelector('.popupContainer')))
+                    .clickOutsideToClose(false)
+                    .title('Error')
+                    .textContent('Must use @primeacademy.io email address, please try again')
+                    .ariaLabel('Invalid Registration Dialog')
+                    .ok('Oh no!')
                 );
             });
         }
